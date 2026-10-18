@@ -61,7 +61,7 @@ export default function Portfolio() {
           </span>
         </h1>
         <p className="text-xl mt-5 mb-8 leading-relaxed text-white w-full font-halenoir">
-          I&apos;m Sergio Navarro, 30, and passionate about artificial
+          I&apos;m Sergio Navarro, 33, and passionate about artificial
           inteligence. To me, developing software and engineering is a way of
           art and magic, transforming neural conections into tangible things.
           I&apos;m on a journey to make a name for myself, actively exploring
