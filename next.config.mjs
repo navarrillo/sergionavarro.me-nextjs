@@ -2,7 +2,11 @@
 import generateRssFeed from "./src/lib/generateTss.mjs";
 
 const nextConfig = {
-  // ... other config options
+  output: "export",
+  images: {
+    unoptimized: true,
+  },
+  productionBrowserSourceMaps: false,
 
   webpack: (config, { isServer }) => {
     if (isServer) {

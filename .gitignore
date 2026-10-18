@@ -26,7 +26,11 @@ yarn-debug.log*
 yarn-error.log*
 
 # local env files
+.env
 .env*.local
+
+# message dumps from the removed /api/send-email route
+emails_*.txt
 
 # vercel
 .vercel

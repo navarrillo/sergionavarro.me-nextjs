@@ -1,7 +1,9 @@
 import RSS from "rss";
 import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
 
-export default async function generateRssFeed() {
+export default function generateRssFeed(targetDir = "./public") {
   const site_url = "https://sergionavarro.me";
 
   const feedOptions = {
@@ -16,19 +18,14 @@ export default async function generateRssFeed() {
 
   const feed = new RSS(feedOptions);
 
-  // Add your blog posts here
-  // Example:
-  // feed.item({
-  //   title: 'My blog #1',
-  //   description: 'Description of blog post',
-  //   url: `${site_url}/blog/my-blog-1`,
-  //   date: new Date('2024-09-01')
-  // });
+  fs.mkdirSync(targetDir, { recursive: true });
+  fs.writeFileSync(path.join(targetDir, "rss.xml"), feed.xml({ indent: true }));
+}
 
-  // Write the RSS feed to a file
-  const rssFolder = "./public";
-  const rssFile = `${rssFolder}/rss.xml`;
+const isDirectRun =
+  process.argv[1] &&
+  path.resolve(process.argv[1]) === fileURLToPath(import.meta.url);
 
-  fs.mkdirSync(rssFolder, { recursive: true });
-  fs.writeFileSync(rssFile, feed.xml({ indent: true }));
+if (isDirectRun) {
+  generateRssFeed(process.argv[2] || "./public");
 }

@@ -1,12 +1,12 @@
 # Personal Landing Page
 
-This is my personal landing page built using [Next.js](https://nextjs.org/). It's a simple website where visitors can learn more about me, find my social media links, and contact me via email.
+This is my personal landing page built using [Next.js](https://nextjs.org/). It's a simple website where visitors can learn more about me and find my social media links.
 
 ## Features
 
 - **About Me**: A brief description highlighting who I am and what I do.
 - **Social Links**: Quick access to my social media profiles.
-- **Contact Form**: A way to reach out to me directly via email.
+- **Contact**: Links to my X, GitHub, and LinkedIn profiles.
 
 ## Technologies Used
 
@@ -38,7 +38,7 @@ To run this project locally:
 
 ## Deployment
 
-This project can be easily deployed using platforms like [Vercel](https://vercel.com/) or [Netlify](https://www.netlify.com/).
+Production is a static export of `main`, served by Caddy. See [DEPLOY.md](DEPLOY.md).
 
 ## Contributing
 
