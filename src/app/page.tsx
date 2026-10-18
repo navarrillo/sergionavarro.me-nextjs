@@ -1,4 +1,6 @@
+import { Age } from "@/components/age";
 import { Button } from "@/components/ui/button";
+import { ageFromBirthDate } from "@/lib/age";
 import { Eye, FileText } from "lucide-react";
 import Link from "next/link";
 
@@ -26,6 +28,8 @@ const contactLinks = [
 ];
 
 export default function Portfolio() {
+  const age = ageFromBirthDate();
+
   return (
     <div
       className={`min-h-screen w-full relative overflow-hidden font-sans flex items-center justify-center`}
@@ -61,7 +65,7 @@ export default function Portfolio() {
           </span>
         </h1>
         <p className="text-xl mt-5 mb-8 leading-relaxed text-white w-full font-halenoir">
-          I&apos;m Sergio Navarro, 33, and passionate about artificial
+          I&apos;m Sergio Navarro, <Age initialAge={age} />, and passionate about artificial
           inteligence. To me, developing software and engineering is a way of
           art and magic, transforming neural conections into tangible things.
           I&apos;m on a journey to make a name for myself, actively exploring
