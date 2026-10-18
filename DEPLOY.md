@@ -19,7 +19,7 @@ npm ci && npm run build
 
 ## Server
 
-A pull-based script on the VPS checks `origin/main` about every 2 minutes. When `main` moves, it runs `npm ci && npm run build` and atomically publishes `out/` to `/srv/sites/sergionavarro.me`.
+Clone https://github.com/navarrillo/sergionavarro.me-nextjs to `/opt/src/sergionavarro-nextjs` once. A pull-based script on the VPS then checks `origin/main` about every 2 minutes. When `main` moves, it runs `npm ci && npm run build` and atomically publishes `out/` to `/srv/sites/sergionavarro.me`.
 
 Keep the release directories on the same filesystem as `/srv/sites` so the final `mv` is an atomic rename. `/srv/sites/sergionavarro.me` is a symlink to the current release.
 
