@@ -75,8 +75,15 @@ export default function Portfolio() {
           <Button
             variant="default"
             className=" text-white hover:bg-white hover:text-black"
+            asChild
           >
-            <Eye className="mr-2 h-4 w-4" /> Projects
+            <a
+              href="https://blog.sergionavarro.me/projects"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Eye className="mr-2 h-4 w-4" /> Projects
+            </a>
           </Button>
           <Button
             variant="default"
