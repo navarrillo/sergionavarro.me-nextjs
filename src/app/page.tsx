@@ -1,7 +1,7 @@
 import { Age } from "@/components/age";
 import { Button } from "@/components/ui/button";
 import { ageFromBirthDate } from "@/lib/age";
-import { Eye, FileText } from "lucide-react";
+import { BookOpen, Eye, FileText } from "lucide-react";
 import Link from "next/link";
 
 const contactLinks = [
@@ -96,6 +96,19 @@ export default function Portfolio() {
               rel="noopener noreferrer"
             >
               <FileText className="mr-2 h-4 w-4" /> CV
+            </a>
+          </Button>
+          <Button
+            variant="default"
+            className=" text-white hover:bg-white hover:text-black"
+            asChild
+          >
+            <a
+              href="https://blog.sergionavarro.me"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <BookOpen className="mr-2 h-4 w-4" /> Blog
             </a>
           </Button>
         </div>
