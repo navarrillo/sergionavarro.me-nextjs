@@ -1,10 +1,22 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 
 export const metadata: Metadata = {
   title: "Sergio Navarro",
   description: "Software engineer empowered by AI",
+  manifest: "/site.webmanifest",
+  appleWebApp: {
+    title: "Sergio Navarro",
+  },
+  icons: {
+    icon: [{ url: "/icon.ico", type: "image/x-icon", sizes: "256x256" }],
+    apple: "/apple-touch-icon.png",
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#1e40af",
 };
 
 export default function RootLayout({
